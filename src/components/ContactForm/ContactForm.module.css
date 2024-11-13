@@ -1,0 +1,48 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px;
+  margin-top: 10px;
+  max-width: 300px;
+  border: 1px solid green;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.field {
+  border: 2px solid;
+  padding: 5px;
+  border-radius: 4px;
+  font-size: 16px;
+
+  &:hover,
+  &:focus {
+    border: 2px solid rgb(25, 124, 195);
+  }
+}
+
+.btn {
+  color: rgb(0, 0, 0);
+  background-color: green;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: greenyellow;
+  }
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: -5px;
+  margin-bottom: 5px;
+}

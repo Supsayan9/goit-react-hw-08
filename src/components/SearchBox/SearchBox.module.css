@@ -1,0 +1,18 @@
+.form {
+  margin-top: 16px;
+  margin-bottom: 20px;
+  padding-left: 15px;
+}
+
+.field {
+  border: 2px solid;
+  border-radius: 4px;
+  padding: 5px;
+  width: 270px;
+
+  &:hover,
+  :focus,
+  :active {
+    border: 2px solid green;
+  }
+}
