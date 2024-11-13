@@ -1,7 +1,11 @@
+import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import clsx from "clsx";
 import s from "../Navigation/Navigation.module.css";
+
 const Navigation = () => {
+  const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
+
   const buildLinkClass = ({ isActive }) =>
     clsx(s.link, isActive && s.activeLink);
 
@@ -10,12 +14,11 @@ const Navigation = () => {
       <NavLink className={buildLinkClass} to="/">
         Home
       </NavLink>
-      <NavLink
-        className={buildLinkClass}
-        to="/contacts"
-      >
-        Contacts
-      </NavLink>
+      {isLoggedIn && (
+        <NavLink className={buildLinkClass} to="/contacts">
+          Contacts
+        </NavLink>
+      )}
     </div>
   );
 };
